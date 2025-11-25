@@ -91,8 +91,15 @@ export const fetchSalesReport = (): Promise<SalesReport> => {
             return reject(new NetworkError("Failed to fetch sales report"));
         } else if (random < 0.25) {
             return reject(
-                new DataError("Sales report contains inconsistent")
-            )
+                new DataError("Sales report contains inconsistent data.")
+            );
         }
-    }
-}
+        resolve({
+            totalSales: 100000,
+            unitsSold: 850,
+            averagePrice: 117.65,
+        });
+    });
+};
+
+
