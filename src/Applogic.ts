@@ -46,7 +46,7 @@ function runDashboard(): void {
         console.log(`\nReviews for ${product.name} (ID: ${product.id}):`);
         reviews.forEach((r, index) =>
           console.log(
-            `  Review #${index + 1}: Rating ${r.rating} - "${r.comment}"`
+            `Review #${index + 1}: Rating ${r.rating} - "${r.comment}"`
           )
         );
       });
